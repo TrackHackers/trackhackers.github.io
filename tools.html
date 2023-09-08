@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hack The Box - Team Lineas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header-main">
+      <h1>Hack The Box</h1>
+      <nav class="header-main__nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./tools.html">Tools</a></li>
+          <li><a href="./challenges.html">Challenges</a></li>
+          <li><a href="./beginner_boxes.html">Beginner Boxes</a></li>
+          <li><a href="./team.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>Essentiële Tools voor Hack The Box</h2>
+        <ul>
+          <li>
+            <a href="https://www.kali.org/" target="_blank">Kali Linux</a> - Een
+            Linux-distributie speciaal ontworpen voor cybersecurity.
+          </li>
+          <li>
+            <a
+              href="https://docs.microsoft.com/en-us/windows/wsl/"
+              target="_blank"
+              >Windows Subsystem for Linux (WSL)</a
+            >
+            - Draai Linux-distributies op Windows.
+          </li>
+          <li>
+            <a href="https://nmap.org/" target="_blank">Nmap</a> -
+            Netwerkscanner.
+          </li>
+          <li>
+            <a href="https://netcat.sourceforge.net/" target="_blank">Netcat</a>
+            - Netwerkcommunicatietool.
+          </li>
+          <li>
+            <a href="https://portswigger.net/burp" target="_blank"
+              >Burp Suite</a
+            >
+            - Webbeveiligingsgereedschap.
+          </li>
+          <li>
+            <a href="https://www.zaproxy.org/" target="_blank">OWASP ZAP</a> -
+            Webbeveiligingsproxy.
+          </li>
+          <li>
+            <a href="https://www.gnu.org/software/gdb/" target="_blank">GDB</a>
+            - GNU Debugger voor binaries.
+          </li>
+          <li>
+            <a href="https://ghidra-sre.org/" target="_blank">Ghidra</a> -
+            Reverse engineering tool.
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Kali-Linux in WSL</h2>
+        <img
+          src="./img/wsl.png"
+          alt="Windows Subsystem for Linux"
+          width="300"
+          height="300"
+          align="right"
+        />
+
+        <p>
+          Een van de meest handige manieren om Kali Linux te draaien op een
+          Windows-systeem is via het Windows Subsystem for Linux (WSL). De
+          installatie is eenvoudig; je activeert eerst WSL via de
+          Windows-functies en installeert dan Kali Linux uit de Microsoft Store.
+          Na de installatie heb je toegang tot een breed scala aan
+          cybersecurity-tools direct vanuit je Windows-omgeving, zonder te
+          hoeven dual-booten of een virtuele machine te draaien.
+        </p>
+
+        <blockquote>
+          WSL met Kali Linux heeft mijn pentesting workflow drastisch verbeterd.
+          Het is een game-changer!
+          <cite>-- een trouwe lezer</cite>
+        </blockquote>
+
+        <blockquote>
+          Als DevSecOps engineer is het essentieel om flexibel te zijn. Met WSL
+          kan ik nu naadloos schakelen tussen Windows en Linux.
+          <cite>-- Fervente hacker</cite>
+        </blockquote>
+
+        <article>
+          <h3>Hoe installeren?</h3>
+          <p>
+            Stap 1: WSL inschakelen Open PowerShell als beheerder. Voer het
+            volgende commando uit om WSL te activeren:
+          </p>
+
+          <pre>
+              <code>
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+              </code>
+            </pre>
+          Stap 2: Virtual Machine Platform inschakelen Voer het volgende
+          commando uit om het Virtual Machine Platform in te schakelen:
+          <pre>
+              <code>
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+              </code>
+            </pre>
+          Stap 3: Linux Kernel Update Package downloaden Download de nieuwste
+          Linux Kernel van de officiële Microsoft-site. Voer het gedownloade
+          MSI-pakket uit om de installatie te voltooien. Stap 4: WSL 2 instellen
+          als standaard Open PowerShell opnieuw als beheerder. Voer het volgende
+          commando uit:
+          <pre>
+              <code>
+wsl --set-default-version 2
+              </code>
+            </pre>
+          Stap 5: Kali Linux installeren Ga naar de Microsoft Store en zoek naar
+          "Kali Linux". Klik op "Installeren" om het installatieproces te
+          starten. Na de installatie, open Kali Linux en volg de instructies om
+          het op te zetten. Stap 6: Kali Linux updaten en upgraden Open de Kali
+          Linux terminal. Voer de volgende commando's uit:
+          <pre>
+              <code>
+sudo apt update && sudo apt upgrade
+              </code>
+            </pre>
+        </article>
+      </article>
+
+      <article>
+        <h2>OpenVPN</h2>
+        <p>
+          OpenVPN is een ander essentieel stuk gereedschap, vooral voor het
+          verbinden met Hack The Box. HTB vereist een VPN-verbinding voor
+          toegang tot hun labomgevingen. Nadat je je account hebt aangemaakt op
+          Hack The Box, kun je een persoonlijk OpenVPN-configuratiebestand
+          downloaden van hun website. Dit bestand kan je vervolgens gebruiken
+          met de OpenVPN-client om een veilige verbinding tot stand te brengen.
+          Voor Kali Linux en andere Linux-distributies kan dit meestal worden
+          gedaan met een simpel commando zoals hieronder wordt weergegeven.
+        </p>
+        <pre>
+          <code>
+sudo openvpn {jouw-configuratiebestand}.ovpn
+          </code>
+        </pre>
+      </article>
+      <article>
+        <h2>Meer Tools voor Hack The Box</h2>
+        <ul>
+          <li>
+            <a href="https://gchq.github.io/CyberChef/" target="_blank"
+              >CyberChef</a
+            >
+            - Een Zwitsers zakmes voor data-encoding, encryptie en meer.
+          </li>
+          <li>
+            <a href="https://www.metasploitunleashed.com/" target="_blank"
+              >Metasploit</a
+            >
+            - Penetratietest-framework.
+          </li>
+          <li>
+            <a href="https://www.wireshark.org/" target="_blank">Wireshark</a> -
+            Netwerkprotocolanalysator.
+          </li>
+          <li>
+            <a href="https://sqlmap.org/" target="_blank">SQLmap</a> -
+            Automatische SQL-injectie en database overname tool.
+          </li>
+          <li>
+            <a href="https://johntheripper.com/" target="_blank"
+              >John the Ripper</a
+            >
+            - Wachtwoordkraker.
+          </li>
+          <li>
+            <a href="https://hashcat.net/hashcat/" target="_blank">Hashcat</a> -
+            Geavanceerde wachtwoordhersteltool.
+          </li>
+          <li>
+            <a href="https://aircrack-ng.org/" target="_blank">Aircrack-ng</a> -
+            Netwerkbeveiligingsgereedschap voor WiFi-audit.
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <footer>
+      <span>© 2023 TrackHackers</span>
+    </footer>
+  </body>
+</html>

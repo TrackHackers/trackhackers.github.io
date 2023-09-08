@@ -1,0 +1,120 @@
+/* Normalize.css => Import cuz only one stylesheet is allowed in HTB */
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import "https://cdn.rawgit.com/google/code-prettify/master/styles/desert.css";
+
+:root {
+  --primary-bg: #ffffff; /* White background */
+  --primary-text: #333333; /* Almost black text */
+  --secondary-bg: #f5f5f5; /* Light gray for secondary areas */
+  --secondary-text: #757575; /* Dark gray for secondary text */
+  --accent-color: #3f51b5; /* Softer shade of indigo for accents */
+  --divider-color: #bdbdbd; /* Divider color */
+  --button-bg: #e0e0e0; /* Button background color */
+  /* Code */
+  --lightGray: #fafafa;
+  --medBlue: #9baecf;
+  --char: #292929;
+}
+
+/* General Style */
+html,
+body {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  margin: 100px;
+  border: 5px solid var(--primary-text);
+}
+
+/* Header */
+header.header-main h1 {
+  font-size: 90px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #9a3c9a, #d3ca93);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Navigation */
+nav.header-main__nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--primary-text);
+}
+
+nav.header-main__nav li {
+  float: left;
+}
+
+nav.header-main__nav li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--primary-bg);
+}
+
+nav.header-main__nav li a:hover {
+  background-color: #111111;
+}
+
+/* Content */
+main {
+  padding: 20px;
+}
+
+main li {
+  padding: 10px;
+}
+
+section.team-member,
+section.challenge,
+section.box {
+  border: 2px solid var(--primary-text);
+  background-color: var(--secondary-bg);
+  padding: 10px;
+  max-width: 80%;
+  margin: 10px auto;
+}
+
+/* Media Embeds */
+iframe {
+  padding: 16px;
+  display: block; /* Center that shit */
+  margin: 0 auto; /* Centering */
+}
+
+/* Footer */
+footer {
+  margin: 0;
+  padding: 16px;
+  overflow: hidden;
+  color: var(--primary-bg);
+  background-color: var(--primary-text);
+}
+
+/* Specials */
+pre code {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  margin: 1.5em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em;
+  display: block;
+  word-wrap: break-word;
+}
