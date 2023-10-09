@@ -1,0 +1,28 @@
+<header class="headerWrapper">
+  <div class="header">
+    <a href="{{ .Site.BaseURL }}">
+      <span class="terminal">
+        {{ .Site.Params.user }}@{{ .Site.Params.hostname }} ~ $
+      </span>
+    </a>
+
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    
+    <nav class="headerLinks">
+      <ul>
+        {{ range .Site.Menus.header }}
+        <li>
+          {{ if .Pre }}
+            {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+            {{ $icon }}
+          {{ end }}
+          <a href="{{ .URL | absURL }}" title="{{ .Title }}">
+            ~/{{- .Name -}}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

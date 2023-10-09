@@ -1,0 +1,35 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# Generic
+translations:
+  other: Vertalingen
+postAvailable:
+  other: Ook beschikbaar in
+powered_by:
+  other: Mogelijk gemaakt door
+and:
+  other: en
+
+# 404.html
+archives:
+  other: Archieven
+
+home:
+  other: Home
+notFound:
+  other: "Oeps, pagina niet gevonden…"
+
+# posts/single.html
+readingTime:
+  one: Eén minuut
+  other: "{{ .Count }} minuten"
+tableOfContents:
+  other: Inhoudstafel
+wordCount:
+  one: Eén woord
+  other: "{{ .Count }} woorden"
+lastModified:
+  other: Laatst bijgewerkt
+readMore:
+  other: Meer lezen ...
