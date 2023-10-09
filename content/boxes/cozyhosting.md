@@ -1,9 +1,29 @@
-# CozyHosting - Easy
+---
+title: cozyhosting
+date: 2023-09-20
+draft: true
+tags: ["HTB", "Write-up"]
+categories: ["Machines"]
+htb_link: https://app.hackthebox.com/machines/cozyhosting
+level: hard
+os: linux
+---
+
+## Machine Summary
+
+| MachineName | {{ .Params.title }}    |
+| ----------- | ---------------------- |
+| HTB Link    | {{ .Params.htb_link }} |
+| OS          | {{ .Params.os }}       |
+| Level       | {{ .Params.level }}    |
+| Seasonal    | No                     |
 
 ```bash
 nmap -sCV {IP}
 ```
+
 Gives
+
 ```
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-09-03 12:32 CEST
 Nmap scan report for 10.10.11.230
@@ -22,4 +42,5 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 28.61 seconds
 ```
+
 ffuf -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt:FUZZ -u "http://cozyhosting.htb/FUZZ"
