@@ -5,15 +5,35 @@ draft: true
 tags: ["HTB", "Write-up"]
 categories: ["Machines"]
 htb_link: https://app.hackthebox.com/machines/clicker
-level: medium
-os: linux
+box_level: medium
+box_os: linux
 ---
 
 ## Machine Summary
 
-| MachineName | {{ .Params.title }}    |
-| ----------- | ---------------------- |
-| HTB Link    | {{ .Params.htb_link }} |
-| OS          | {{ .Params.os }}       |
-| Level       | {{ .Params.level }}    |
-| Seasonal    | No                     |
+<table>
+  <thead>
+    <tr>
+      <th>Machine Name</th>
+      <th>{{ .Params.title }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTB Link</td>
+      <td><a href="{{ .Params.htb_link }}">{{ .Params.htb_link }}</a></td>
+    </tr>
+    <tr>
+      <td>OS</td>
+      <td>{{ .Params.box_os }}</td>
+    </tr>
+    <tr>
+      <td>Level</td>
+      <td>{{ .Params.box_level }}</td>
+    </tr>
+    <tr>
+      <td>Seasonal</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,22 @@
-# Topology Write-up
+---
+title: Topology
+date: 2023-09-20
+draft: true
+tags: ["HTB", "Write-up"]
+categories: ["Machines"]
+htb_link: https://app.hackthebox.com/machines/topology
+level: easy
+os: linux
+---
+
+## Machine Summary
+
+| MachineName | {{ .Params.title }}    |
+| ----------- | ---------------------- |
+| HTB Link    | {{ .Params.htb_link }} |
+| OS          | {{ .Params.os }}       |
+| Level       | {{ .Params.level }}    |
+| Seasonal    | No                     |
 
 Start off with the usual; I always go for adding the IP to my hosts file as this is faster and easier.
 
