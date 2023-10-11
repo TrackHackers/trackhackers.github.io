@@ -4,9 +4,6 @@ body {
   font-family: $fontParagraph;
   color: $white;
   background-color: $backgroundDark;
-  background-image: url("../images/background.svg");
-  background-position: right bottom; /*Positioning*/
-  background-repeat: no-repeat; /*Prevent showing multiple background images*/
   margin: 0;
   display: flex;
   flex-direction: column;
