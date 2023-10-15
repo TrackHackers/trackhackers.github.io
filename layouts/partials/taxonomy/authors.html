@@ -1,8 +1,10 @@
-<!-- [html-validate-disable element-required-ancestor] -->
-<dt>{{ i18n "authors" }}</dt>
+<dt>
+  {{ i18n "authors" }}
+</dt>
+
 <dd>
-{{- range $index, $el := . -}}
+  {{- range $index, $el := . -}}
     <span></span>
     <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
-{{- end -}}
+  {{- end -}}
 </dd>

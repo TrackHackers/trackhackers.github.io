@@ -4,7 +4,7 @@ languageCode: en-us
 
 # Params
 params:
-  hostname: "TrackHackers"
+  sitename: "TrackHackers"
   author: "TrackHackers"
   readingTime: true # Show reading time on post page
   published: true # Show published data on post page
@@ -14,15 +14,15 @@ menu:
     - name: boxes
       weight: 1
       url: boxes
-      pre: box
+      pre: desktop
     - name: seasonals
       weight: 2
       url: seasonals
-      pre: pen-tool
+      pre: pen-to-square
     - name: tools
       weight: 23
       url: tools
-      pre: tool
+      pre: wrench
     - name: about
       weight: 99
       url: about

@@ -1,9 +1,6 @@
 <footer class="footer">
-  <script>
-    feather.replace();
-  </script>
   {{ with .Site.Params.footerHtml }}
-  <span>{{ . | safeHTML }}</span>
+    <span>{{ . | safeHTML }}</span>
   {{ else }}
   <span>
     © {{ now.Format "2006" }} {{ .Site.Params.author }} {{ i18n "powered_by" }}

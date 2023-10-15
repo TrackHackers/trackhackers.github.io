@@ -7,7 +7,7 @@ author:
   name: TrackHackers
 ---
 
-## Intro
+## Wat is Hack The Box?
 
 Hack The Box (HTB) is een online platform dat je uitdaagt om je
 vaardigheden in cybersecurity en ethisch hacken te testen. Het is een

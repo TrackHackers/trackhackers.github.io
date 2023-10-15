@@ -1,16 +1,13 @@
-@import "./global";
+// Normalize
+@import "normalize";
 
-// utils
-@import "./utils/variables";
-@import "./utils/fonts";
+// Import Colors and fonts
+@import "sakura";
 
-// components
-@import "./components/footer";
-@import "./components/header";
-@import "./components/post";
+// Import Base
+@import "base";
+@import "typography";
 
-// pages
-@import "./pages/single";
-@import "./pages/list";
-@import "./pages/index";
-@import "./pages/baseof";
+// Import Components
+@import "components/forms";
+@import "components/navigation";
