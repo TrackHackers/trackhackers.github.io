@@ -2,18 +2,5 @@
 ~/boxes</a></li><li><a href=/seasonals title><i class="fa-solid fa-pen-to-square"></i>
 ~/seasonals</a></li><li><a href=/tools title><i class="fa-solid fa-wrench"></i>
 ~/tools</a></li><li><a href=/about title><i class="fa-solid fa-user"></i>
-~/about</a></li></ul></nav></header><main class="content main"><h1>Write-ups</h1><a href=/seasonals/analytical-write-up/><span></span>
-<time datetime=0001-01-01>January 1, 1</time><p>Seasonal 3 2023 - Analytical; Linux Easy echo "${box-ip} analytical.htb" | sudo tee -a /etc/hosts Recon with nmap nmap -sCV analytical.htb Shows the following ports to be open; 22/tcp 80/tcp This tells me we need to use the browser, so off we go. It&rsquo;s a simple site with a login option.
-The login menu is actually pointing to data.analytical.htb, which is leads to a 404. So we need to add that one to our hosts file as well.</p></a><a href=/seasonals/drive-write-up/><span></span>
-<time datetime=0001-01-01>January 1, 1</time><p></p></a><a href=/seasonals/manager-write-up/><span></span>
-<time datetime=0001-01-01>January 1, 1</time><p>Open Beta Season III: Manager Boxname Manager OS Windows Difficulty according the HTB Medium Difficulty for newbies like myself Hard Setup echo "${target-ip} manager.htb" | sudo tee -a /etc/hosts
-Initial Recon nmap -sCV manager.htb gives you more information, mainly that we&rsquo;re dealing with an IIS server, which we will be checking. We also have a DNS server, Domain Controller, SQL server and some other fun ports open.
-┌─[eu-dedivip-2]─[10.10.14.66]─[htb-moonwitch@htb-iqv6bfvlz5]─[~] └──╼ [★]$ nmap -sCV manager.</p></a><a href=/seasonals/visual-write-up/><span></span>
-<time datetime=0001-01-01>January 1, 1</time><p>Write-Up: Visual OS -> Windows Level -> Medium
-Handy tips I always enter the IP - hostname into my /etc/hosts, this is simply faster for me to type.
-echo "${TARGET_IP} visual.htb" | sudo tee -a /etc/hosts
-Initial recon Start off with nmap -sCV ${TARGET_IP} This gets you the results you need; there&rsquo;s an opening, a web server running on tcp/80.
-![nmap](./Visual Write-up.assets/image-20231006090740045.png)
-Needless to say, we check that out.
-Since I know it&rsquo;s a site, I&rsquo;ll go on and check the used stack with Wappalyzer; this tells me that we&rsquo;re using</p></a></main><footer class=footer><span>© 2023 TrackHackers Powered by
+~/about</a></li></ul></nav></header><main class="content main"><h1>Write-ups</h1></main><footer class=footer><span>© 2023 TrackHackers Powered by
 <a href=https://gohugo.io class=footerLink>Hugo</a></span></footer></body></html>
