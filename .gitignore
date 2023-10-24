@@ -3,7 +3,7 @@
 
 # Generated files by hugo
 /public
-/resources/*
+/resources
 /assets/jsconfig.json
 hugo_stats.json
 
