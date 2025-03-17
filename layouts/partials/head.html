@@ -28,4 +28,6 @@
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
 
+<script src="https://cdn.tailwindcss.com"></script>
+
 <script src="https://kit.fontawesome.com/406767c203.js" crossorigin="anonymous"></script>

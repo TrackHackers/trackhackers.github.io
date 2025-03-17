@@ -11,9 +11,9 @@ params:
 
 menu:
   header:
-    - name: boxes
+    - name: challenges
       weight: 1
-      url: boxes
+      url: challenges
       pre: desktop
     - name: seasonals
       weight: 2
